@@ -10,18 +10,28 @@ int[,] matriz_divisao = new int[qnt_linhas, qnt_colunas];
 
 //Primeira Matriz
 //Geração
+Console.WriteLine("Primeira Matriz:");
 for (int linha = 0; linha < qnt_linhas; linha++)
 {
     for (int coluna = 0; coluna < qnt_colunas; coluna++)
     {
-        matriz_1[linha, coluna] = new Random().Next(0, 100);
+        matriz_1[linha, coluna] = new Random().Next(0, 10);
     }
 }
 
 //Impressão
+for (int linha = 0; linha < qnt_linhas; linha++)
+{
+    Console.WriteLine();
+    for (int coluna = 0; coluna < qnt_colunas; coluna++)
+    {
+        Console.Write(matriz_1[linha, coluna] + " ");
+    }
+}
 
 //Segunda Matriz
 //Geração
+Console.WriteLine("\n\nSegunda Matriz:");
 for (int linha = 0; linha < qnt_linhas; linha++)
 {
     for (int coluna = 0; coluna < qnt_colunas; coluna++)
@@ -31,10 +41,18 @@ for (int linha = 0; linha < qnt_linhas; linha++)
 }
 
 //Impressão
-
+for (int linha = 0; linha < qnt_linhas; linha++)
+{
+    Console.WriteLine();
+    for (int coluna = 0; coluna < qnt_colunas; coluna++)
+    {
+        Console.Write(matriz_2[linha,coluna] + " ");
+    }
+}
 
 //Matriz de Soma
 //Geração
+Console.WriteLine("\n\nMatriz de Soma:");
 for (int linha = 0; linha < qnt_linhas; linha++)
 {
     for (int coluna = 0; coluna < qnt_colunas; coluna++)
@@ -44,21 +62,77 @@ for (int linha = 0; linha < qnt_linhas; linha++)
 }
 
 //Impressão
+for (int linha = 0; linha < qnt_linhas; linha++)
+{
+    Console.WriteLine();
+    for (int coluna = 0; coluna < qnt_colunas; coluna++)
+    {
+        Console.Write(matriz_soma[linha, coluna] + " ");
+    }
+}
 
 //Matriz de Subtração
 //Geração
+Console.WriteLine("\n\nMatriz de Subtração:");
+for (int linha = 0; linha < qnt_linhas; linha++)
+{
+    for (int coluna = 0; coluna < qnt_colunas; coluna++)
+    {
+        matriz_subtracao[linha, coluna] = matriz_1[linha, coluna] - matriz_2[linha, coluna];
+    }
+}
 
 //Impressão
+for (int linha = 0; linha < qnt_linhas; linha++)
+{
+    Console.WriteLine();
+    for (int coluna = 0; coluna < qnt_colunas; coluna++)
+    {
+        Console.Write(matriz_subtracao[linha, coluna] + " ");
+    }
+}
 
 //Matriz de Multiplicação
 //Geração
+Console.WriteLine("\n\nMatriz de Multiplicação:");
+for (int linha = 0; linha < qnt_linhas; linha++)
+{
+    for (int coluna = 0; coluna < qnt_colunas; coluna++)
+    {
+        matriz_multiplicacao[linha, coluna] = matriz_1[linha, coluna] * matriz_2[linha, coluna];
+    }
+}
 
 //Impressão
+for (int linha = 0; linha < qnt_linhas; linha++)
+{
+    Console.WriteLine();
+    for (int coluna = 0; coluna < qnt_colunas; coluna++)
+    {
+        Console.Write(matriz_multiplicacao[linha, coluna] + " ");
+    }
+}
 
 //Matriz de Divisão
 //Geração
+Console.WriteLine("\n\nMatriz de Divisão:");
+for (int linha = 0; linha < qnt_linhas; linha++)
+{
+    for (int coluna = 0; coluna < qnt_colunas; coluna++)
+    {
+        matriz_divisao[linha, coluna] = matriz_1[linha, coluna] / matriz_2[linha, coluna];
+    }
+}
 
 //Impressão
+for (int linha = 0; linha < qnt_linhas; linha++)
+{
+    Console.WriteLine();
+    for (int coluna = 0; coluna < qnt_colunas; coluna++)
+    {
+        Console.Write(matriz_divisao[linha, coluna] + " ");
+    }
+}
 
 Console.WriteLine("\n\nPressione ENTER para encerrar...");
 Console.ReadKey();
