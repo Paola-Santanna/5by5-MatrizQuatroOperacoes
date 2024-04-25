@@ -10,6 +10,17 @@ float[,] matriz_1 = new float[qnt_linhas, qnt_colunas];
 float[,] matriz_2 = new float[qnt_linhas, qnt_colunas];
 
 //Funções
+void GerarMatriz(float[,] matrizGerada)
+{
+    for (int linha = 0; linha < qnt_linhas; linha++)
+    {
+        for (int coluna = 0; coluna < qnt_colunas; coluna++)
+        {
+            matrizGerada[linha, coluna] = new Random().Next(0, 10);
+        }
+    }
+}
+
 void ImprimirMatriz(float[,] matriz, string titulo)
 {
     Console.WriteLine("\n" + titulo);
@@ -118,24 +129,12 @@ void Menu()
 
 //Primeira Matriz
 //Geração
-for (int linha = 0; linha < qnt_linhas; linha++)
-{
-    for (int coluna = 0; coluna < qnt_colunas; coluna++)
-    {
-        matriz_1[linha, coluna] = new Random().Next(0, 10);
-    }
-}
+GerarMatriz(matriz_1);
 ImprimirMatriz(matriz_1, "Primeira Matriz:");
 
 //Segunda Matriz
 //Geração
-for (int linha = 0; linha < qnt_linhas; linha++)
-{
-    for (int coluna = 0; coluna < qnt_colunas; coluna++)
-    {
-        matriz_2[linha, coluna] = new Random().Next(0, 10);
-    }
-}
+GerarMatriz(matriz_2);
 ImprimirMatriz(matriz_2, "\nSegunda Matriz:");
 
 do
