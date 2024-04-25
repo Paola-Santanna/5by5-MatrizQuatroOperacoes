@@ -1,5 +1,10 @@
 ﻿//Construa 2 matrizes e mostre os resultados, com as 4 operações;
-int qnt_linhas = 3, qnt_colunas = 3;
+//Criar funções no exercício de 4 operações das matrizes:
+//1 - O usuário vai informar qual operação ele quer fazer
+//2 - Criar a função de sorteio da matriz
+//3 - Criar a função que vai informar o tamanho da criação da matriz
+
+int qnt_linhas = 3, qnt_colunas = 3, opcao;
 
 int[,] matriz_1 = new int[qnt_linhas, qnt_colunas];
 int[,] matriz_2 = new int[qnt_linhas, qnt_colunas];
@@ -7,6 +12,14 @@ int[,] matriz_soma = new int[qnt_linhas, qnt_colunas];
 int[,] matriz_subtracao = new int[qnt_linhas, qnt_colunas];
 int[,] matriz_multiplicacao = new int[qnt_linhas, qnt_colunas];
 int[,] matriz_divisao = new int[qnt_linhas, qnt_colunas];
+
+//Funções
+void escolha_operacao(opcao)
+{
+    Console.WriteLine("Digite o número da operação escolhida: ");
+    Console.WriteLine("1 -> Adição \n2 -> Subtração \n3 -> Multiplicação \n4 -> Divisão");
+    opcao = int.Parse(Console.ReadLine());
+}
 
 //Primeira Matriz
 //Geração
