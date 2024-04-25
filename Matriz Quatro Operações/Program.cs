@@ -127,13 +127,11 @@ void Menu()
     OpcaoEscolhida(escolhaUsuario);
 }
 
-//Primeira Matriz
-//Geração
+//Geração da Primeira Matriz
 GerarMatriz(matriz_1);
 ImprimirMatriz(matriz_1, "Primeira Matriz:");
 
-//Segunda Matriz
-//Geração
+//Geração da Segunda Matriz
 GerarMatriz(matriz_2);
 ImprimirMatriz(matriz_2, "\nSegunda Matriz:");
 
